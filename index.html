@@ -14,38 +14,45 @@
   </head>
   <body>
     <main>
-      <h1>Article about furniture</h1>
-      <article>
-        <div>
-          <img
+      <h1 class="sr-only">Article about furniture</h1>
+
+      <article class="card">
+
+        <div class="card__image-container">
+          <img class="card__image"
             src="images/drawers.jpg"
             alt="A teal colored dresser with multiple drawers next to a mustard yellow couch which has a ceramic vase filled with dried wheat, one small framed text and one framed painting. " />
         </div>
-        <div>
-          <h2>
-            Shift the overall look and feel by adding these wonderful touches to
-            furniture in your home
-          </h2>
-          <p>
-            Ever been in a room and felt like something was missing? Perhaps it
-            felt slightly bare and uninviting. I've got some simple tips to help
-            you make any room feel complete.
-          </p>
-          <footer>
-            <img src="images/avatar-michelle.jpg" alt="">
-            <div>
-              <p>Michelle Appleton</p> 
-              <time datetime="2020-06-28">28 Jun 2020</time>
+
+        <div class="card__content">
+
+          <div class="card__body">
+            <h2 class="card__title"> <!-- TODO: h2 or p ?? -->
+              Shift the overall look and feel by adding these wonderful touches to
+              furniture in your home
+            </h2>
+            <p class="card__description">
+              Ever been in a room and felt like something was missing? Perhaps it
+              felt slightly bare and uninviting. I've got some simple tips to help
+              you make any room feel complete.
+            </p>
+          </div>
+
+          <footer class="card__footer">
+            <img class="card__footer-image" src="images/avatar-michelle.jpg" alt="" />
+            <div class="card__info" > <!-- TODO: different class name ? -->
+              <p class="card__author">Michelle Appleton</p>
+              <time class="card__publish-date" datetime="2020-06-28">28 Jun 2020</time>
             </div>
-            <div>
-              <p>Share</p>
-              <img src="images/icon-facebook.svg" alt="">
-              <img src="images/icon-twitter.svg" alt="">
-              <img src="images/icon-pinterest.svg" alt="">
-              
+            <div class="social social--hidden">
+              <p class="social__text">Share</p>
+              <img class="social__icon" src="images/icon-facebook.svg" alt="" />
+              <img class="social__icon" src="images/icon-twitter.svg" alt="" />
+              <img class="social__icon" src="images/icon-pinterest.svg" alt="" />
             </div>
-            <button><img src="images/icon-share.svg" alt=""></button>
+            <button class="btn btn--active"><img src="images/icon-share.svg" alt="" /></button>
           </footer>
+
         </div>
       </article>
     </main>
