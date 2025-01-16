@@ -1,0 +1,28 @@
+@use "functions" as *;
+
+// Colors
+
+$very-dark-grayish-blue: hsl(217, 19%, 35%);
+$desaturated-dark-blue: hsl(214, 17%, 51%);
+$grayish-blue: hsl(212, 23%, 69%);
+$light-grayish-blue: hsl(210, 46%, 95%);
+$white: hsl(0, 0%, 100%);
+
+$fs-200: pxToRem(12);
+$fs-250: pxToRem(13);
+$fs-300: pxToRem(14);
+$fs-400: pxToRem(16);
+$fs-500: pxToRem(18);
+$fs-600: pxToRem(20);
+$fs-700: pxToRem(24);
+
+$ff-manrope: "Manrope", serif;
+
+$fw-medium: 500;
+$fw-bold: 700;
+
+
+// $shadow-l: 0 2.5rem 2.5rem -0.625rem rgba(201, 213, 255, 0.5);
+$radius-full: 9999px;
+
+// $fs-h1: clamp(1rem, calc(1rem + ((1vw - 0.2rem) * 0.4545)), 1.25rem);
