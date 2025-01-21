@@ -1,0 +1,7 @@
+@use 'variables' as *;
+
+@mixin flex($position) {
+  display: flex;
+  justify-content: $position;
+  align-items: center;
+}

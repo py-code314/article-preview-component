@@ -1,3 +1,128 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
 body {
-  background-color: hotpink;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+#root, #__next {
+  isolation: isolate;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100svh;
+  background-color: hsl(210, 46%, 95%);
+  font-family: "Manrope", serif;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.card {
+  max-inline-size: 327px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.card__image-container {
+  height: 200px;
+}
+
+.card__image {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  /* TODO:Image is almost similar to the design, but needs to be moved down if wanna get the exact crop */
+}
+
+.card__content {
+  background-color: hsl(0, 0%, 100%);
+  font-family: "Manrope", serif;
+}
+
+.card__body {
+  padding: 36px 32px 24px;
+}
+
+.card__title {
+  font-size: 1rem;
+  letter-spacing: 0.18px;
+  margin-block-end: 14px;
+}
+
+.card__description {
+  font-size: 0.8125rem;
+  font-weight: 500;
+  letter-spacing: 0.18px;
+}
+
+.card__footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 32px 20px;
+}
+
+.card__footer-image {
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+}
+
+.card__author-byline {
+  display: flex;
+  gap: 18px;
+}
+
+.card__details {
+  font-size: 0.8125rem;
+}
+
+.card__author-name {
+  font-weight: 700;
+}
+
+.card__btn {
+  border: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card__social--hidden {
+  display: none;
 }

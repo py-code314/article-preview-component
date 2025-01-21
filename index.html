@@ -9,6 +9,11 @@
       sizes="32x32"
       href="./images/favicon-32x32.png" />
     <title>Frontend Mentor | Article preview component</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap"
+      rel="stylesheet" />
     <link rel="stylesheet" href="css/styles.css" />
     <script src="js/main.js" defer></script>
   </head>
@@ -17,50 +22,62 @@
       <h1 class="sr-only">Article about furniture</h1>
 
       <article class="card">
-
         <div class="card__image-container">
-          <img class="card__image"
+          <img
+            class="card__image"
             src="images/drawers.jpg"
             alt="A teal colored dresser with multiple drawers next to a mustard yellow couch which has a ceramic vase filled with dried wheat, one small framed text and one framed painting. " />
         </div>
 
         <div class="card__content">
-
           <div class="card__body">
-
-            <h2 class="card__title"> <!-- TODO: h2 or p ?? -->
-              Shift the overall look and feel by adding these wonderful touches to
-              furniture in your home
+            <h2 class="card__title">
+              <!-- TODO: h2 or p ?? -->
+              Shift the overall look and feel by adding these wonderful touches
+              to furniture in your home
             </h2>
 
             <p class="card__description">
-              Ever been in a room and felt like something was missing? Perhaps it
-              felt slightly bare and uninviting. I've got some simple tips to help
-              you make any room feel complete.
+              Ever been in a room and felt like something was missing? Perhaps
+              it felt slightly bare and uninviting. I've got some simple tips to
+              help you make any room feel complete.
             </p>
-
           </div>
 
-          <footer class="card__footer">
-
-            <img class="card__footer-image" src="images/avatar-michelle.jpg" alt="" />
-
-            <div class="card__details" > 
-              <p class="card__author">Michelle Appleton</p>
-              <time class="card__publish-date" datetime="2020-06-28">28 Jun 2020</time>
+          <div class="card__footer">
+            <div class="card__author-byline">
+              <img
+                class="card__footer-image"
+                src="images/avatar-michelle.jpg"
+                alt="" />
+              <div class="card__details">
+                <p class="card__author-name">Michelle Appleton</p>
+                <time class="card__publish-date" datetime="2020-06-28"
+                  >28 Jun 2020</time
+                >
+              </div>
             </div>
 
             <div class="card__social card__social--hidden">
               <p class="card__social-text">Share</p>
-              <img class="card__social-icon" src="images/icon-facebook.svg" alt="" />
-              <img class="card__social-icon" src="images/icon-twitter.svg" alt="" />
-              <img class="card__social-icon" src="images/icon-pinterest.svg" alt="" />
+              <img
+                class="card__social-icon"
+                src="images/icon-facebook.svg"
+                alt="" />
+              <img
+                class="card__social-icon"
+                src="images/icon-twitter.svg"
+                alt="" />
+              <img
+                class="card__social-icon"
+                src="images/icon-pinterest.svg"
+                alt="" />
             </div>
 
-            <button class="card__btn card__btn--active"><img src="images/icon-share.svg" alt="" /></button>
-
-          </footer>
-
+            <button class="card__btn card__btn--active">
+              <img class="card__share-icon" src="images/icon-share.svg" alt="" />
+            </button>
+          </div>
         </div>
       </article>
     </main>

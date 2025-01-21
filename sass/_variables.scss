@@ -23,6 +23,7 @@ $fw-bold: 700;
 
 
 // $shadow-l: 0 2.5rem 2.5rem -0.625rem rgba(201, 213, 255, 0.5);
-$radius-full: 9999px;
+$border-radius-sm: pxToRem(8);
+$border-radius-md: pxToRem(12);
 
 // $fs-h1: clamp(1rem, calc(1rem + ((1vw - 0.2rem) * 0.4545)), 1.25rem);
