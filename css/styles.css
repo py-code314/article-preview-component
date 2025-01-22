@@ -69,10 +69,11 @@ body {
 .card__content {
   background-color: hsl(0, 0%, 100%);
   font-family: "Manrope", serif;
+  color: hsl(217, 19%, 35%);
 }
 
 .card__body {
-  padding: 36px 32px 24px;
+  padding: 36px 32px 22px;
 }
 
 .card__title {
@@ -91,7 +92,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 32px 20px;
+  padding: 14px 32px 20px;
 }
 
 .card__footer-image {
@@ -102,7 +103,7 @@ body {
 
 .card__author-byline {
   display: flex;
-  gap: 18px;
+  gap: 16px;
 }
 
 .card__details {
@@ -113,14 +114,35 @@ body {
   font-weight: 700;
 }
 
+.card__publish-date {
+  opacity: 60%;
+}
+
 .card__btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border: none;
   width: 30px;
   height: 30px;
   border-radius: 50%;
+}
+
+.card__social {
   display: flex;
   justify-content: center;
   align-items: center;
+  font-size: 0.8125rem;
+}
+
+.card__social > *:not(:last-child) {
+  margin-inline-end: 17px;
+}
+
+.card__social-text {
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  color: hsl(212, 23%, 69%);
 }
 
 .card__social--hidden {
