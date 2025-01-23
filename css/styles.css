@@ -35,6 +35,7 @@ body {
   min-height: 100svh;
   background-color: hsl(210, 46%, 95%);
   font-family: "Manrope", serif;
+  padding: 1rem;
 }
 
 .sr-only {
@@ -54,9 +55,21 @@ body {
   border-radius: 0.75rem;
   overflow: hidden;
 }
+@media (min-width: 48em) {
+  .card {
+    max-inline-size: 45.625rem;
+    display: grid;
+    grid-template-columns: 17.8125rem 27.8125rem;
+  }
+}
 
 .card__image-container {
   height: 12.5rem;
+}
+@media (min-width: 48em) {
+  .card__image-container {
+    height: 17.5rem;
+  }
 }
 
 .card__image {
@@ -74,18 +87,27 @@ body {
 
 .card__body {
   padding: 2.25rem 2rem 1.375rem;
+  letter-spacing: 0.18px; /* TODO: convert into rem? */
+}
+@media (min-width: 48em) {
+  .card__body {
+    padding: 2rem 2.5rem 0.5rem;
+  }
 }
 
 .card__title {
-  font-size: 1rem;
-  letter-spacing: 0.18px; /* TODO: convert into rem? */
+  font-size: clamp(1rem, 0.912rem + 0.376vw, 1.25rem);
   margin-block-end: 0.875rem;
+}
+@media (min-width: 48em) {
+  .card__title {
+    line-height: 1.4;
+  }
 }
 
 .card__description {
   font-size: 0.8125rem;
   font-weight: 500;
-  letter-spacing: 0.18px;
 }
 
 .card__footer {
@@ -93,6 +115,11 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 0.875rem 2rem 1.25rem;
+}
+@media (min-width: 48em) {
+  .card__footer {
+    padding: 0.875rem 2.5rem 1.25rem;
+  }
 }
 
 .card__footer-image {

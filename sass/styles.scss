@@ -9,6 +9,7 @@ body {
   min-height: 100svh;
   background-color: $clr-light-grayish-blue;
   font-family: $ff-manrope;
+  padding: 1rem;
 }
 
 .sr-only {
@@ -27,18 +28,29 @@ body {
   max-inline-size: $width-card-mobile;
   border-radius: $radius-md;
   overflow: hidden;
+
+  @include tablet {
+    max-inline-size: $width-card-desktop;
+    display: grid;
+    grid-template-columns: $width-img-desktop $width-card-body-desktop;
+  }
 }
 
 .card__image-container {
   height: $height-img-mobile;
+
+  @include tablet {
+    height: $height-img-desktop;
+    // display: grid;
+    // place-items: anchor-center;
+  }
 }
 
 .card__image {
   height: 100%;
   width: 100%;
   object-fit:cover;
-  /* TODO:Image is almost similar to the design, but needs to be moved down if wanna get the exact crop */
-  
+  /* TODO:Image is almost similar to the design, but needs to be moved down if wanna get the exact crop */ 
 }
 
 .card__content {
@@ -49,24 +61,35 @@ body {
 
 .card__body {
   padding: $space-1000 $space-900 $space-650;
+  letter-spacing: 0.18px; /* TODO: convert into rem? */
+
+  @include tablet {
+    padding: $space-900 $space-1100 $space-80;
+  }
 }
 
 .card__title {
-  font-size: $fs-400;
-  letter-spacing: 0.18px; /* TODO: convert into rem? */
+  font-size: $fs-card-title;  
   margin-block-end: $space-300; 
+
+  @include tablet {
+    line-height: 1.4;
+  }
 }
 
 .card__description {
   font-size: $fs-250;
   font-weight: $fw-medium;
-  letter-spacing: 0.18px;
 }
 
 .card__footer {
   @include flex(space-between);
 
   padding: $space-300 $space-900 $space-600;
+
+  @include tablet {
+    padding: $space-300 $space-1100 $space-600;
+  }
 }
 
 .card__footer-image {

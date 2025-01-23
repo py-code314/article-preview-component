@@ -5,3 +5,9 @@
   justify-content: $position;
   align-items: center;
 }
+
+@mixin tablet {
+  @media (min-width: 48em) {
+    @content;
+  }
+}

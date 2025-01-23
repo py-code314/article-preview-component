@@ -15,13 +15,23 @@ $fs-400: pxToRem(16);
 $fs-500: pxToRem(18);
 $fs-600: pxToRem(20);
 $fs-700: pxToRem(24);
+$fs-card-title: clamp(1rem, 0.912rem + 0.376vw, 1.25rem);
 
 $width-card-mobile: pxToRem(327);
+$width-card-desktop: pxToRem(730);
+// $width-card: clamp(20.438rem, 11.569rem + 37.84vw, 45.625rem);
+
 $height-img-mobile: pxToRem(200);
+$height-img-desktop: pxToRem(280);
+$height-img: clamp(12.5rem, 10.739rem + 7.512vw, 17.5rem);
+
+$width-img-desktop: pxToRem(285);
+$width-card-body-desktop: pxToRem(445);
 
 $len-1100: pxToRem(40);
 $len-850: pxToRem(30);
 
+$space-80: pxToRem(8);
 $space-300: pxToRem(14);
 $space-400: pxToRem(16);
 $space-450: pxToRem(17);
@@ -29,6 +39,7 @@ $space-600: pxToRem(20);
 $space-650: pxToRem(22);
 $space-900: pxToRem(32);
 $space-1000: pxToRem(36);
+$space-1100: pxToRem(40);
 
 
 $ff-manrope: "Manrope", serif;
