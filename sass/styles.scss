@@ -7,7 +7,7 @@ body {
   @include flex(center);
 
   min-height: 100svh;
-  background-color: $light-grayish-blue;
+  background-color: $clr-light-grayish-blue;
   font-family: $ff-manrope;
 }
 
@@ -24,13 +24,13 @@ body {
 }
 
 .card {
-  max-inline-size: 327px;
-  border-radius: 12px;
+  max-inline-size: $width-card-mobile;
+  border-radius: $radius-md;
   overflow: hidden;
 }
 
 .card__image-container {
-  height: 200px;
+  height: $height-img-mobile;
 }
 
 .card__image {
@@ -42,19 +42,19 @@ body {
 }
 
 .card__content {
-  background-color: $white;
+  background-color: $clr-white;
   font-family: $ff-manrope;
-  color: $very-dark-grayish-blue
+  color: $clr-very-dark-grayish-blue
 }
 
 .card__body {
-  padding: 36px 32px 22px;
+  padding: $space-1000 $space-900 $space-650;
 }
 
 .card__title {
   font-size: $fs-400;
-  letter-spacing: 0.18px;
-  margin-block-end: 14px;
+  letter-spacing: 0.18px; /* TODO: convert into rem? */
+  margin-block-end: $space-300; 
 }
 
 .card__description {
@@ -66,18 +66,18 @@ body {
 .card__footer {
   @include flex(space-between);
 
-  padding: 14px 32px 20px;
+  padding: $space-300 $space-900 $space-600;
 }
 
 .card__footer-image {
-  border-radius: 50%;
-  height: 40px;
-  width: 40px;
+  border-radius: $radius-lg;
+  height: $len-1100;
+  width: $len-1100;
 }
 
 .card__author-byline {
   display: flex;
-  gap: 16px;
+  gap: $space-400;
 
 }
 
@@ -98,9 +98,10 @@ body {
   @include flex(center);
 
   border: none;
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
+  width: $len-850;
+  height: $len-850;
+  border-radius: $radius-lg;
+  cursor: pointer;
 }
 
 .card__social {
@@ -110,13 +111,13 @@ body {
 }
 
 .card__social > *:not(:last-child) {
-  margin-inline-end: 17px;
+  margin-inline-end: $space-450;
 }
 
 .card__social-text {
   text-transform: uppercase;
   letter-spacing: 5px;
-  color: $grayish-blue
+  color: $clr-grayish-blue
 
 }
 
