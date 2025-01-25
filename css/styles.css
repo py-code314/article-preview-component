@@ -60,6 +60,7 @@ body {
     max-inline-size: 45.625rem;
     display: grid;
     grid-template-columns: 17.8125rem 27.8125rem;
+    overflow: visible;
   }
 }
 
@@ -78,11 +79,21 @@ body {
   object-fit: cover;
   /* TODO:Image is almost similar to the design, but needs to be moved down if wanna get the exact crop */
 }
+@media (min-width: 48em) {
+  .card__image {
+    border-radius: 0.75rem 0 0 0.75rem;
+  }
+}
 
 .card__content {
   background-color: hsl(0, 0%, 100%);
   font-family: "Manrope", serif;
   color: hsl(217, 19%, 35%);
+}
+@media (min-width: 48em) {
+  .card__content {
+    border-radius: 0 0.75rem 0.75rem 0;
+  }
 }
 
 .card__body {
@@ -115,6 +126,7 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 0.875rem 2rem 1.25rem;
+  position: relative;
 }
 @media (min-width: 48em) {
   .card__footer {
@@ -145,7 +157,7 @@ body {
   opacity: 60%;
 }
 
-.card__btn {
+.card__share-btn {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -154,17 +166,56 @@ body {
   height: 1.875rem;
   border-radius: 62.4375rem;
   cursor: pointer;
+  z-index: 1;
+}
+
+.card__share-btn[aria-expanded=true] {
+  background-color: hsl(214, 17%, 51%);
+}
+.card__share-btn[aria-expanded=true] svg path {
+  fill: hsl(0, 0%, 100%);
 }
 
 .card__social {
   display: flex;
-  justify-content: center;
   align-items: center;
+  gap: 16px;
   font-size: 0.8125rem;
+  background-color: hsl(217, 19%, 35%);
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding-inline-start: 32px;
+}
+@media (min-width: 48em) {
+  .card__social {
+    width: max-content;
+    height: max-content;
+    padding: 18px 36px;
+    border-radius: 0.5rem;
+    left: 266px;
+    bottom: 86px;
+  }
 }
 
-.card__social > *:not(:last-child) {
-  margin-inline-end: 1.0625rem;
+@media (min-width: 48em) {
+  .card__social::after {
+    content: "";
+    position: absolute;
+    border-right: 12px solid transparent;
+    border-left: 12px solid transparent;
+    border-top: 12px solid hsl(217, 19%, 35%);
+    width: 0;
+    height: 0;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.card__share-btn[aria-expanded=true] + .card__social {
+  display: flex;
 }
 
 .card__social-text {

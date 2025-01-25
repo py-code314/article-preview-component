@@ -2,7 +2,6 @@
 @use 'variables' as *;
 @use 'mixins' as *;
 
-
 body {
   @include flex(center);
 
@@ -24,6 +23,10 @@ body {
   border: 0;
 }
 
+.card__wrapper {
+  // width: 800px;
+}
+
 .card {
   max-inline-size: $width-card-mobile;
   border-radius: $radius-md;
@@ -33,11 +36,13 @@ body {
     max-inline-size: $width-card-desktop;
     display: grid;
     grid-template-columns: $width-img-desktop $width-card-body-desktop;
+    overflow: visible;
   }
 }
 
 .card__image-container {
   height: $height-img-mobile;
+  // overflow: hidden;
 
   @include tablet {
     height: $height-img-desktop;
@@ -49,14 +54,22 @@ body {
 .card__image {
   height: 100%;
   width: 100%;
-  object-fit:cover;
-  /* TODO:Image is almost similar to the design, but needs to be moved down if wanna get the exact crop */ 
+  object-fit: cover;
+  /* TODO:Image is almost similar to the design, but needs to be moved down if wanna get the exact crop */
+  // border-radius: $radius-md;
+  @include tablet {
+    border-radius: $radius-md 0 0 $radius-md;
+  }
 }
 
 .card__content {
   background-color: $clr-white;
   font-family: $ff-manrope;
-  color: $clr-very-dark-grayish-blue
+  color: $clr-very-dark-grayish-blue;
+
+  @include tablet {
+    border-radius: 0 $radius-md $radius-md 0;
+  }
 }
 
 .card__body {
@@ -65,12 +78,13 @@ body {
 
   @include tablet {
     padding: $space-900 $space-1100 $space-80;
+    // position: relative;
   }
 }
 
 .card__title {
-  font-size: $fs-card-title;  
-  margin-block-end: $space-300; 
+  font-size: $fs-card-title;
+  margin-block-end: $space-300;
 
   @include tablet {
     line-height: 1.4;
@@ -86,9 +100,11 @@ body {
   @include flex(space-between);
 
   padding: $space-300 $space-900 $space-600;
+  position: relative;
 
   @include tablet {
     padding: $space-300 $space-1100 $space-600;
+    // position: static;
   }
 }
 
@@ -101,23 +117,21 @@ body {
 .card__author-byline {
   display: flex;
   gap: $space-400;
-
 }
 
 .card__details {
-  font-size: $fs-250
+  font-size: $fs-250;
 }
 
 .card__author-name {
   font-weight: $fw-bold;
-
 }
 
 .card__publish-date {
   opacity: $opacity-60;
 }
 
-.card__btn {
+.card__share-btn {
   @include flex(center);
 
   border: none;
@@ -125,27 +139,70 @@ body {
   height: $len-850;
   border-radius: $radius-lg;
   cursor: pointer;
+  z-index: 1;
+}
+
+.card__share-btn[aria-expanded='true'] {
+  background-color: hsl(214, 17%, 51%);
+
+  svg path {
+    fill: hsl(0, 0%, 100%);
+  }
 }
 
 .card__social {
-  @include flex(center);
-  
+  display: flex;
+  align-items: center;
+  gap: 16px;
+
   font-size: $fs-250;
+  background-color: $clr-very-dark-grayish-blue;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding-inline-start: 32px;
+
+  @include tablet {
+    width: max-content;
+    height: max-content;
+    padding: 18px 36px;
+    border-radius: $radius-sm;
+    left: 266px;
+    // top: 129px;
+    // right: -7rem;
+    bottom: 86px;
+    // z-index: 99;
+  }
 }
 
-.card__social > *:not(:last-child) {
-  margin-inline-end: $space-450;
+.card__social::after {
+  @include tablet {
+    content: '';
+    position: absolute;
+    border-right: 12px solid transparent;
+    border-left: 12px solid transparent;
+    border-top: 12px solid $clr-very-dark-grayish-blue;
+
+    width: 0;
+    height: 0;
+
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.card__share-btn[aria-expanded='true'] + .card__social {
+  display: flex;
 }
 
 .card__social-text {
   text-transform: uppercase;
   letter-spacing: 5px;
-  color: $clr-grayish-blue
-
+  color: $clr-grayish-blue;
 }
 
 .card__social--hidden {
   display: none;
 }
-
-

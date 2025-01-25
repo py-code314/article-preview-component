@@ -21,66 +21,64 @@
     <main>
       <h1 class="sr-only">Article about furniture</h1>
 
-      <article class="card">
-        <div class="card__image-container">
-          <img
-            class="card__image"
-            src="images/drawers.jpg"
-            alt="A teal colored dresser with multiple drawers next to a mustard yellow couch which has a ceramic vase filled with dried wheat, one small framed text and one framed painting. " />
-        </div>
-
-        <div class="card__content">
-          <div class="card__body">
-            <h2 class="card__title">
-              <!-- TODO: h2 or p ?? -->
-              Shift the overall look and feel by adding these wonderful touches
-              to furniture in your home
-            </h2>
-
-            <p class="card__description">
-              Ever been in a room and felt like something was missing? Perhaps
-              it felt slightly bare and uninviting. I've got some simple tips to
-              help you make any room feel complete.
-            </p>
+      <div class="card__wrapper">
+        <article class="card">
+          <div class="card__image-container">
+            <img
+              class="card__image"
+              src="images/drawers.jpg"
+              alt="A teal colored dresser with multiple drawers next to a mustard yellow couch which has a ceramic vase filled with dried wheat, one small framed text and one framed painting. " />
           </div>
-
-          <div class="card__footer">
-            <div class="card__author-byline">
-              <img
-                class="card__footer-image"
-                src="images/avatar-michelle.jpg"
-                alt="" />
-              <div class="card__details">
-                <p class="card__author-name">Michelle Appleton</p>
-                <time class="card__publish-date" datetime="2020-06-28"
-                  >28 Jun 2020</time
-                >
+          <div class="card__content">
+            <div class="card__body">
+              <h2 class="card__title">
+                <!-- TODO: h2 or p ?? -->
+                Shift the overall look and feel by adding these wonderful touches
+                to furniture in your home
+              </h2>
+              <p class="card__description">
+                Ever been in a room and felt like something was missing? Perhaps
+                it felt slightly bare and uninviting. I've got some simple tips to
+                help you make any room feel complete.
+              </p>
+            </div>
+            <div class="card__footer">
+              <div class="card__author-byline">
+                <img
+                  class="card__footer-image"
+                  src="images/avatar-michelle.jpg"
+                  alt="" />
+                <div class="card__details">
+                  <p class="card__author-name">Michelle Appleton</p>
+                  <time class="card__publish-date" datetime="2020-06-28"
+                    >28 Jun 2020</time
+                  >
+                </div>
               </div>
+              <button id="card__share-btn" class="card__share-btn card__btn--active" aria-expanded="false">
+                <!-- <img class="card__share-icon" src="images/icon-share.svg" alt="" /> -->
+                 <svg class="card__share-icon" xmlns="http://www.w3.org/2000/svg" width="15" height="13"><path fill="#6E8098" d="M15 6.495L8.766.014V3.88H7.441C3.33 3.88 0 7.039 0 10.936v2.049l.589-.612C2.59 10.294 5.422 9.11 8.39 9.11h.375v3.867L15 6.495z"/></svg>
+              </button>
+              <div class="card__social card__social--hidden">
+                <p class="card__social-text">Share</p>
+                <img
+                  class="card__social-icon"
+                  src="images/icon-facebook.svg"
+                  alt="" />
+                <img
+                  class="card__social-icon"
+                  src="images/icon-twitter.svg"
+                  alt="" />
+                <img
+                  class="card__social-icon"
+                  src="images/icon-pinterest.svg"
+                  alt="" />
+              </div>
+        
             </div>
-
-            <div class="card__social card__social--hidden">
-              <p class="card__social-text">Share</p>
-              <img
-                class="card__social-icon"
-                src="images/icon-facebook.svg"
-                alt="" />
-              <img
-                class="card__social-icon"
-                src="images/icon-twitter.svg"
-                alt="" />
-              <img
-                class="card__social-icon"
-                src="images/icon-pinterest.svg"
-                alt="" />
-            </div>
-
-            <button class="card__btn card__btn--active">
-              <!-- <img class="card__share-icon" src="images/icon-share.svg" alt="" /> -->
-               <svg class="card__share-icon" xmlns="http://www.w3.org/2000/svg" width="15" height="13"><path fill="#6E8098" d="M15 6.495L8.766.014V3.88H7.441C3.33 3.88 0 7.039 0 10.936v2.049l.589-.612C2.59 10.294 5.422 9.11 8.39 9.11h.375v3.867L15 6.495z"/></svg>
-            </button>
           </div>
-        </div>
-      </article>
+        </article>
+      </div>
     </main>
   </body>
 </html>
