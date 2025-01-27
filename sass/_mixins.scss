@@ -6,8 +6,8 @@
   align-items: center;
 }
 
-@mixin tablet {
-  @media (min-width: 48em) {
+@mixin laptop {
+  @media (min-width: 64em) {
     @content;
   }
 }

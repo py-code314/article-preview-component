@@ -29,8 +29,32 @@ let isSocial = false;
   
 // }
 
-function toggleSocialIcons() {
+function showSocialIcons() {
   shareBtn.setAttribute('aria-expanded', 'true')
 }
 
-shareBtn.addEventListener('click', toggleSocialIcons)
+shareBtn.addEventListener('click', showSocialIcons);
+
+function closeSocialIcons(event) {
+  // const socialIconsContainer = event.target.closest('.card__social')
+  if (event.key === 'Escape') {
+     shareBtn.setAttribute('aria-expanded', 'false');
+  } 
+
+
+}
+  
+function closeSocialDiv(event) {
+if (!socialIcons.contains(event.target) && shareBtn.getAttribute('aria-expanded') === 'true') {
+  shareBtn.setAttribute('aria-expanded', 'false');
+}
+
+}
+ 
+
+
+
+
+document.addEventListener('keydown', closeSocialIcons)
+// document.addEventListener('click', closeSocialDiv)
+

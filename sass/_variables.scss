@@ -19,7 +19,7 @@ $fs-card-title: clamp(1rem, 0.912rem + 0.376vw, 1.25rem);
 
 $width-card-mobile: pxToRem(327);
 $width-card-desktop: pxToRem(730);
-// $width-card: clamp(20.438rem, 11.569rem + 37.84vw, 45.625rem);
+
 
 $height-img-mobile: pxToRem(200);
 $height-img-desktop: pxToRem(280);
@@ -27,14 +27,17 @@ $height-img: clamp(12.5rem, 10.739rem + 7.512vw, 17.5rem);
 
 $width-img-desktop: pxToRem(285);
 $width-card-body-desktop: pxToRem(445);
+$width-border-pseudo: pxToRem(12);
 
 $len-1100: pxToRem(40);
 $len-850: pxToRem(30);
 
 $space-80: pxToRem(8);
+$space-200: pxToRem(12);
 $space-300: pxToRem(14);
 $space-400: pxToRem(16);
 $space-450: pxToRem(17);
+$space-500: pxToRem(18);
 $space-600: pxToRem(20);
 $space-650: pxToRem(22);
 $space-800: pxToRem(28);
@@ -50,9 +53,9 @@ $fw-medium: 500;
 $fw-bold: 700;
 
 $opacity-60: 60%;
-// $shadow-l: 0 2.5rem 2.5rem -0.625rem rgba(201, 213, 255, 0.5);
+$shadow-lg: 0 5px 10px rgba(154,160,185,.2), 0 15px 40px rgba(166,173,201,.2);
+$shadow-sm: 2px 5px 10px rgba(154,160,185,.5);
 $radius-sm: pxToRem(8);
 $radius-md: pxToRem(12);
 $radius-lg: pxToRem(999);
 
-// $fs-h1: clamp(1rem, calc(1rem + ((1vw - 0.2rem) * 0.4545)), 1.25rem);

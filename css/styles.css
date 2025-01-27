@@ -53,21 +53,20 @@ body {
 .card {
   max-inline-size: 20.4375rem;
   border-radius: 0.75rem;
-  overflow: hidden;
+  box-shadow: 0 5px 10px rgba(154, 160, 185, 0.2), 0 15px 40px rgba(166, 173, 201, 0.2);
 }
-@media (min-width: 48em) {
+@media (min-width: 64em) {
   .card {
     max-inline-size: 45.625rem;
     display: grid;
     grid-template-columns: 17.8125rem 27.8125rem;
-    overflow: visible;
   }
 }
 
 .card__image-container {
   height: 12.5rem;
 }
-@media (min-width: 48em) {
+@media (min-width: 64em) {
   .card__image-container {
     height: 17.5rem;
   }
@@ -78,8 +77,9 @@ body {
   width: 100%;
   object-fit: cover;
   /* TODO:Image is almost similar to the design, but needs to be moved down if wanna get the exact crop */
+  border-radius: 0.75rem 0.75rem 0 0;
 }
-@media (min-width: 48em) {
+@media (min-width: 64em) {
   .card__image {
     border-radius: 0.75rem 0 0 0.75rem;
   }
@@ -89,8 +89,9 @@ body {
   background-color: hsl(0, 0%, 100%);
   font-family: "Manrope", serif;
   color: hsl(217, 19%, 35%);
+  border-radius: 0 0 0.75rem 0.75rem;
 }
-@media (min-width: 48em) {
+@media (min-width: 64em) {
   .card__content {
     border-radius: 0 0.75rem 0.75rem 0;
   }
@@ -98,9 +99,9 @@ body {
 
 .card__body {
   padding: 2.25rem 2rem 1.375rem;
-  letter-spacing: 0.18px; /* TODO: convert into rem? */
+  letter-spacing: 0.18px;
 }
-@media (min-width: 48em) {
+@media (min-width: 64em) {
   .card__body {
     padding: 2rem 2.5rem 0.5rem;
   }
@@ -110,7 +111,7 @@ body {
   font-size: clamp(1rem, 0.912rem + 0.376vw, 1.25rem);
   margin-block-end: 0.875rem;
 }
-@media (min-width: 48em) {
+@media (min-width: 64em) {
   .card__title {
     line-height: 1.4;
   }
@@ -128,8 +129,17 @@ body {
   padding: 0.875rem 2rem 1.25rem;
   position: relative;
 }
-@media (min-width: 48em) {
+@media (min-width: 64em) {
   .card__footer {
+    padding: 0.875rem 2.5rem 1.25rem;
+  }
+}
+
+.card__footer:has(> .card__share-btn[aria-expanded=true]) {
+  padding: 0.75rem 2rem 0.75rem;
+}
+@media (min-width: 64em) {
+  .card__footer:has(> .card__share-btn[aria-expanded=true]) {
     padding: 0.875rem 2.5rem 1.25rem;
   }
 }
@@ -179,33 +189,35 @@ body {
 .card__social {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 1rem;
   font-size: 0.8125rem;
   background-color: hsl(217, 19%, 35%);
   position: absolute;
   left: 0;
   width: 100%;
   height: 100%;
-  padding-inline-start: 32px;
+  padding-inline-start: 2rem;
+  border-radius: 0 0 0.75rem 0.75rem;
 }
-@media (min-width: 48em) {
+@media (min-width: 64em) {
   .card__social {
     width: max-content;
     height: max-content;
-    padding: 18px 36px;
+    padding: 1.125rem 2.25rem;
     border-radius: 0.5rem;
-    left: 266px;
-    bottom: 86px;
+    left: 60%;
+    bottom: 115%;
+    box-shadow: 2px 5px 10px rgba(154, 160, 185, 0.5);
   }
 }
 
-@media (min-width: 48em) {
+@media (min-width: 64em) {
   .card__social::after {
     content: "";
     position: absolute;
-    border-right: 12px solid transparent;
-    border-left: 12px solid transparent;
-    border-top: 12px solid hsl(217, 19%, 35%);
+    border-right: 0.75rem solid transparent;
+    border-left: 0.75rem solid transparent;
+    border-top: 0.75rem solid hsl(217, 19%, 35%);
     width: 0;
     height: 0;
     top: 100%;
@@ -220,7 +232,7 @@ body {
 
 .card__social-text {
   text-transform: uppercase;
-  letter-spacing: 5px;
+  letter-spacing: 0.4em;
   color: hsl(212, 23%, 69%);
 }
 
