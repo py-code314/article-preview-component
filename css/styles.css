@@ -236,6 +236,10 @@ body {
   color: hsl(212, 23%, 69%);
 }
 
+.card__social-icon {
+  cursor: pointer;
+}
+
 .card__social--hidden {
   display: none;
 }

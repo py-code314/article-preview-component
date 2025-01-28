@@ -50,7 +50,7 @@ body {
   width: 100%;
   object-fit: cover;
   /* TODO:Image is almost similar to the design, but needs to be moved down if wanna get the exact crop */
-  // border-radius: $radius-md;
+  
   border-radius: $radius-md $radius-md 0 0 ;
 
   @include laptop {
@@ -146,15 +146,21 @@ body {
   border-radius: $radius-lg;
   cursor: pointer;
   z-index: 1;
+  
 }
 
+
+
 .card__share-btn[aria-expanded='true'] {
-  background-color: hsl(214, 17%, 51%);
+  background-color: $clr-desaturated-dark-blue;
 
   svg path {
     fill: hsl(0, 0%, 100%);
   }
 }
+
+
+
 
 .card__social {
   display: flex;
@@ -207,6 +213,11 @@ body {
   letter-spacing: 0.4em;
   color: $clr-grayish-blue;
 }
+
+.card__social-icon {
+  cursor: pointer;
+}
+
 
 .card__social--hidden {
   display: none;

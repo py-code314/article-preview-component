@@ -15,7 +15,6 @@
       href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap"
       rel="stylesheet" />
     <link rel="stylesheet" href="css/styles.css" />
-    <script src="js/main.js" defer></script>
   </head>
   <body>
     <main>
@@ -27,19 +26,18 @@
             <img
               class="card__image"
               src="images/drawers.jpg"
-              alt="A teal colored dresser next to a mustard yellow couch, which has on top a vase and two framed art prints " />
+              alt="A teal colored dresser next to a mustard yellow couch, which has on top a vase with dried wheat and two framed art prints " />
           </div>
           <div class="card__content">
             <div class="card__body">
               <h2 class="card__title">
-                <!-- TODO: h2 or p ?? -->
-                Shift the overall look and feel by adding these wonderful touches
-                to furniture in your home
+                Shift the overall look and feel by adding these wonderful
+                touches to furniture in your home
               </h2>
               <p class="card__description">
                 Ever been in a room and felt like something was missing? Perhaps
-                it felt slightly bare and uninviting. I've got some simple tips to
-                help you make any room feel complete.
+                it felt slightly bare and uninviting. I've got some simple tips
+                to help you make any room feel complete.
               </p>
             </div>
             <div class="card__footer">
@@ -55,30 +53,55 @@
                   >
                 </div>
               </div>
-              <button id="card__share-btn" class="card__share-btn card__btn--active" aria-expanded="false">
+              <button
+                id="card__share-btn"
+                class="card__share-btn card__btn--active"
+                aria-expanded="false"
+                aria-controls="card__social"
+                aria-label="Toggle Share Options">
+                
                 <!-- <img class="card__share-icon" src="images/icon-share.svg" alt="" /> -->
-                 <svg class="card__share-icon" xmlns="http://www.w3.org/2000/svg" width="15" height="13"><path fill="#6E8098" d="M15 6.495L8.766.014V3.88H7.441C3.33 3.88 0 7.039 0 10.936v2.049l.589-.612C2.59 10.294 5.422 9.11 8.39 9.11h.375v3.867L15 6.495z"/></svg>
+                <svg
+                focusable="false"
+                aria-hidden="true"
+                  class="card__share-icon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="15"
+                  height="13">
+                  <path
+                    fill="#6E8098"
+                    d="M15 6.495L8.766.014V3.88H7.441C3.33 3.88 0 7.039 0 10.936v2.049l.589-.612C2.59 10.294 5.422 9.11 8.39 9.11h.375v3.867L15 6.495z" />
+                </svg>
               </button>
-              <div class="card__social card__social--hidden">
+              <div class="card__social card__social--hidden"
+              role="region" aria-labelledby="card__share-btn" tabindex="-1"
+              aria-label="Social media sharing options">
                 <p class="card__social-text">Share</p>
-                <img
-                  class="card__social-icon"
-                  src="images/icon-facebook.svg"
-                  alt="" />
-                <img
-                  class="card__social-icon"
-                  src="images/icon-twitter.svg"
-                  alt="" />
-                <img
-                  class="card__social-icon"
-                  src="images/icon-pinterest.svg"
-                  alt="" />
+                <a class="card__social-link" href="https://www.facebook.com/" aria-label="Share on Facebook">
+                  <img
+                    class="card__social-icon"
+                    src="images/icon-facebook.svg"
+                    alt="" />
+                </a>
+                <a class="card__social-link" href="https://x.com/" aria-label="Share on Twitter/X">
+                  <img
+                    class="card__social-icon"
+                    src="images/icon-twitter.svg"
+                    alt="" />
+                </a>
+                <a class="card__social-link" href="https://www.pinterest.com/" aria-label="Share on Pinterest">
+                  <img
+                    class="card__social-icon"
+                    src="images/icon-pinterest.svg"
+                    alt="" />
+                </a>
               </div>
-        
             </div>
           </div>
         </article>
       </div>
     </main>
+
+    <script src="/js/main.js"></script>
   </body>
 </html>
