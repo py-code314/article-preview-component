@@ -1,3 +1,4 @@
+/* Reset */
 *, *::before, *::after {
   box-sizing: border-box;
 }
@@ -28,6 +29,7 @@ p, h1, h2, h3, h4, h5, h6 {
   isolation: isolate;
 }
 
+/* Styles for the whole page */
 body {
   display: flex;
   justify-content: center;
@@ -38,6 +40,7 @@ body {
   padding: 1rem;
 }
 
+/* Hidden Page Title */
 .sr-only {
   position: absolute;
   width: 1px;
@@ -50,6 +53,7 @@ body {
   border: 0;
 }
 
+/* Styles for Card Layout */
 .card {
   max-inline-size: 20.4375rem;
   border-radius: 0.75rem;
@@ -72,11 +76,11 @@ body {
   }
 }
 
+/* Image fills the whole container */
 .card__image {
   height: 100%;
   width: 100%;
   object-fit: cover;
-  /* TODO:Image is almost similar to the design, but needs to be moved down if wanna get the exact crop */
   border-radius: 0.75rem 0.75rem 0 0;
 }
 @media (min-width: 64em) {
@@ -85,6 +89,7 @@ body {
   }
 }
 
+/* Styles for Card Content */
 .card__content {
   background-color: hsl(0, 0%, 100%);
   font-family: "Manrope", serif;
@@ -97,6 +102,7 @@ body {
   }
 }
 
+/* Styles for the text inside the Card */
 .card__body {
   padding: 2.25rem 2rem 1.375rem;
   letter-spacing: 0.18px;
@@ -107,6 +113,7 @@ body {
   }
 }
 
+/* Styles for Card Title */
 .card__title {
   font-size: clamp(1rem, 0.912rem + 0.376vw, 1.25rem);
   margin-block-end: 0.875rem;
@@ -117,11 +124,13 @@ body {
   }
 }
 
+/* Styles for Card Description */
 .card__description {
   font-size: 0.8125rem;
   font-weight: 500;
 }
 
+/* Separate styles for Card Footer so that Social Media Buttons can be positioned relative to it */
 .card__footer {
   display: flex;
   justify-content: space-between;
@@ -135,6 +144,7 @@ body {
   }
 }
 
+/* Styles for Card Footer when Social Media Buttons are Open in Mobile View */
 .card__footer:has(> .card__share-btn[aria-expanded=true]) {
   padding: 0.75rem 2rem 0.75rem;
 }
@@ -144,17 +154,19 @@ body {
   }
 }
 
+.card__author-byline {
+  display: flex;
+  gap: 1rem;
+}
+
+/* Styles for Author Avatar */
 .card__footer-image {
   border-radius: 62.4375rem;
   height: 2.5rem;
   width: 2.5rem;
 }
 
-.card__author-byline {
-  display: flex;
-  gap: 1rem;
-}
-
+/* Styles for Author Info */
 .card__details {
   font-size: 0.8125rem;
 }
@@ -167,6 +179,7 @@ body {
   opacity: 60%;
 }
 
+/* Styles for Share Button */
 .card__share-btn {
   display: flex;
   justify-content: center;
@@ -179,6 +192,7 @@ body {
   z-index: 1;
 }
 
+/* Styles for Share Button when Social Media Buttons are Open */
 .card__share-btn[aria-expanded=true] {
   background-color: hsl(214, 17%, 51%);
 }
@@ -186,12 +200,14 @@ body {
   fill: hsl(0, 0%, 100%);
 }
 
+/* Styles for Social Media Buttons Container in Mobile View */
 .card__social {
   display: flex;
   align-items: center;
   gap: 1rem;
   font-size: 0.8125rem;
   background-color: hsl(217, 19%, 35%);
+  /* Place it inside Card Footer occupying the whole width and height */
   position: absolute;
   left: 0;
   width: 100%;
@@ -211,6 +227,7 @@ body {
   }
 }
 
+/* Create Pseudo Element for Social Media Buttons Container in Laptop View */
 @media (min-width: 64em) {
   .card__social::after {
     content: "";
@@ -226,10 +243,12 @@ body {
   }
 }
 
+/* Show Social Media Buttons Container when Share Button is Clicked */
 .card__share-btn[aria-expanded=true] + .card__social {
   display: flex;
 }
 
+/* Styles for Social Media Icons Container */
 .card__social-text {
   text-transform: uppercase;
   letter-spacing: 0.4em;

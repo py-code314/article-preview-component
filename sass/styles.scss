@@ -1,7 +1,10 @@
+// Import Partials
 @use 'reset' as *;
 @use 'variables' as *;
 @use 'mixins' as *;
 
+
+/* Styles for the whole page */
 body {
   @include flex(center);
 
@@ -11,6 +14,8 @@ body {
   padding: 1rem;
 }
 
+
+/* Hidden Page Title */
 .sr-only {
   position: absolute;
   width: 1px;
@@ -24,12 +29,13 @@ body {
 }
 
 
-
+/* Styles for Card Layout */
 .card {
   max-inline-size: $width-card-mobile;
   border-radius: $radius-md;
   box-shadow: $shadow-lg;
 
+  // Use Grid Layout for Laptop Screen Size
   @include laptop {
     max-inline-size: $width-card-desktop;
     display: grid;
@@ -37,20 +43,23 @@ body {
   }
 }
 
+
+
 .card__image-container {
   height: $height-img-mobile;
 
+  // Change Image Height for Laptop Screen Size
   @include laptop {
     height: $height-img-desktop;
   }
 }
 
+
+/* Image fills the whole container */
 .card__image {
   height: 100%;
   width: 100%;
   object-fit: cover;
-  /* TODO:Image is almost similar to the design, but needs to be moved down if wanna get the exact crop */
-  
   border-radius: $radius-md $radius-md 0 0 ;
 
   @include laptop {
@@ -58,6 +67,8 @@ body {
   }
 }
 
+
+/* Styles for Card Content */
 .card__content {
   background-color: $clr-white;
   font-family: $ff-manrope;
@@ -69,6 +80,8 @@ body {
   }
 }
 
+
+/* Styles for the text inside the Card */
 .card__body {
   padding: $space-1000 $space-900 $space-650;
   letter-spacing: 0.18px; 
@@ -78,6 +91,8 @@ body {
   }
 }
 
+
+/* Styles for Card Title */
 .card__title {
   font-size: $fs-card-title;
   margin-block-end: $space-300;
@@ -87,11 +102,15 @@ body {
   }
 }
 
+
+/* Styles for Card Description */
 .card__description {
   font-size: $fs-250;
   font-weight: $fw-medium;
 }
 
+
+/* Separate styles for Card Footer so that Social Media Buttons can be positioned relative to it */
 .card__footer {
   @include flex(space-between);
 
@@ -103,21 +122,16 @@ body {
   }
 }
 
+
+/* Styles for Card Footer when Social Media Buttons are Open in Mobile View */
 .card__footer:has(> .card__share-btn[aria-expanded='true'])  {
   padding: $space-200 $space-900 $space-200;
 
+  // No Change in Padding for Laptop Screen Size
   @include laptop {
     padding: $space-300 $space-1100 $space-600;
 
 }
-}
-
-
-
-.card__footer-image {
-  border-radius: $radius-lg;
-  height: $len-1100;
-  width: $len-1100;
 }
 
 .card__author-byline {
@@ -125,18 +139,32 @@ body {
   gap: $space-400;
 }
 
+
+/* Styles for Author Avatar */
+.card__footer-image {
+  border-radius: $radius-lg;
+  height: $len-1100;
+  width: $len-1100;
+}
+
+
+/* Styles for Author Info */
 .card__details {
   font-size: $fs-250;
 }
+
 
 .card__author-name {
   font-weight: $fw-bold;
 }
 
+
 .card__publish-date {
   opacity: $opacity-60;
 }
 
+
+/* Styles for Share Button */
 .card__share-btn {
   @include flex(center);
 
@@ -150,7 +178,7 @@ body {
 }
 
 
-
+/* Styles for Share Button when Social Media Buttons are Open */
 .card__share-btn[aria-expanded='true'] {
   background-color: $clr-desaturated-dark-blue;
 
@@ -160,8 +188,7 @@ body {
 }
 
 
-
-
+/* Styles for Social Media Buttons Container in Mobile View */
 .card__social {
   display: flex;
   align-items: center;
@@ -169,6 +196,7 @@ body {
 
   font-size: $fs-250;
   background-color: $clr-very-dark-grayish-blue;
+  /* Place it inside Card Footer occupying the whole width and height */
   position: absolute;
   left: 0;
   width: 100%;
@@ -176,6 +204,7 @@ body {
   padding-inline-start: $space-900;
   border-radius: 0 0 $radius-md $radius-md  ;
 
+  // Place it on top of Share Button when it's clicked
   @include laptop {
     width: max-content;
     height: max-content;
@@ -187,6 +216,8 @@ body {
   }
 }
 
+
+/* Create Pseudo Element for Social Media Buttons Container in Laptop View */
 .card__social::after {
   @include laptop {
     content: '';
@@ -194,25 +225,28 @@ body {
     border-right: $width-border-pseudo solid transparent;
     border-left: $width-border-pseudo solid transparent;
     border-top: $width-border-pseudo solid $clr-very-dark-grayish-blue;
-
     width: 0;
     height: 0;
-
     top: 100%;
     left: 50%;
     transform: translateX(-50%);
   }
 }
 
+
+/* Show Social Media Buttons Container when Share Button is Clicked */
 .card__share-btn[aria-expanded='true'] + .card__social {
   display: flex;
 }
 
+
+/* Styles for Social Media Icons Container */
 .card__social-text {
   text-transform: uppercase;
   letter-spacing: 0.4em;
   color: $clr-grayish-blue;
 }
+
 
 .card__social-icon {
   cursor: pointer;

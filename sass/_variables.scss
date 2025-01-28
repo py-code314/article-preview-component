@@ -1,13 +1,20 @@
+// Import Partials
 @use "functions" as *;
 
-// Colors
 
+// Colors
 $clr-very-dark-grayish-blue: hsl(217, 19%, 35%);
 $clr-desaturated-dark-blue: hsl(214, 17%, 51%);
 $clr-grayish-blue: hsl(212, 23%, 69%);
 $clr-light-grayish-blue: hsl(210, 46%, 95%);
 $clr-white: hsl(0, 0%, 100%);
 
+
+// Font Family
+$ff-manrope: "Manrope", serif;
+
+
+// Font Sizes
 $fs-200: pxToRem(12);
 $fs-250: pxToRem(13);
 $fs-300: pxToRem(14);
@@ -17,21 +24,29 @@ $fs-600: pxToRem(20);
 $fs-700: pxToRem(24);
 $fs-card-title: clamp(1rem, 0.912rem + 0.376vw, 1.25rem);
 
+
+// Font Weights
+$fw-medium: 500;
+$fw-bold: 700;
+
+
+// Width and Height
 $width-card-mobile: pxToRem(327);
 $width-card-desktop: pxToRem(730);
-
-
-$height-img-mobile: pxToRem(200);
-$height-img-desktop: pxToRem(280);
-$height-img: clamp(12.5rem, 10.739rem + 7.512vw, 17.5rem);
 
 $width-img-desktop: pxToRem(285);
 $width-card-body-desktop: pxToRem(445);
 $width-border-pseudo: pxToRem(12);
 
+$height-img-mobile: pxToRem(200);
+$height-img-desktop: pxToRem(280);
+$height-img: clamp(12.5rem, 10.739rem + 7.512vw, 17.5rem);
+
 $len-1100: pxToRem(40);
 $len-850: pxToRem(30);
 
+
+// Spacing
 $space-80: pxToRem(8);
 $space-200: pxToRem(12);
 $space-300: pxToRem(14);
@@ -47,11 +62,7 @@ $space-1000: pxToRem(36);
 $space-1100: pxToRem(40);
 
 
-$ff-manrope: "Manrope", serif;
-
-$fw-medium: 500;
-$fw-bold: 700;
-
+// Utilities
 $opacity-60: 60%;
 $shadow-lg: 0 5px 10px rgba(154,160,185,.2), 0 15px 40px rgba(166,173,201,.2);
 $shadow-sm: 2px 5px 10px rgba(154,160,185,.5);

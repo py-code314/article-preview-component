@@ -1,11 +1,16 @@
+// Import Partials
 @use 'variables' as *;
 
+
+// Position Elements using Flex
 @mixin flex($position) {
   display: flex;
   justify-content: $position;
   align-items: center;
 }
 
+
+// Media Query
 @mixin laptop {
   @media (min-width: 64em) {
     @content;
