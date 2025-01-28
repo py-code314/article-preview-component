@@ -18,19 +18,25 @@ This is a solution to the [Article preview component challenge on Frontend Mento
 
 
 ## Overview
-
+It's a front-end challenge from Frontend Mentor to build a responsive article preview component. The teaser is responsive and can be used on any screen size. It is styled as a card and contains an image, title, description and footer. The card is interactive in that when user clicks on share button, the social media buttons are displayed and when the user clicks anywhere outside the share button, social media buttons are hidden. All of this is implemented using CSS and vanilla JavaScript. Finally, the card is also accessible to screen readers.
 
 
 
 ### Screenshot
 
-![](./screenshot.jpg)
+<p>
+    <img src="./images/screenshot-mobile-1.png" width="45%" hspace="10" >
+    <img src="./images/screenshot-mobile-active-state-1.png" width="45%" hspace="10" >
+    <p>
+    <img src="./images/screenshot-desktop-1.png" width="45%" hspace="10" >
+    <img src="./images/screenshot-desktop-active-state-1.png" width="45%" hspace="10" >
+</p>
 
 
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [https://github.com/py-code314/article-preview-component](https://github.com/py-code314/article-preview-component)
 - Live Site URL: [Add live site URL here](https://your-live-site-url.com)
 
 ## My process
