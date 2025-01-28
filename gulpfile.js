@@ -27,5 +27,10 @@ function watch() {
   gulp.watch('js/**/*.js').on('change', browserSync.reload);
 }
 
+function build(cb) {
+  gulp.series(styles)(cb);
+}
+
 exports.styles = styles;
 exports.watch = watch;
+exports.build = build;
