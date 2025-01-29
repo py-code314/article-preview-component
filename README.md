@@ -2,6 +2,8 @@
 
 This is a solution to the [Article preview component challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/article-preview-component-dYBN_pYFT). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
 
+
+
 ## Table of contents
 
 - [Frontend Mentor - Article preview component solution](#frontend-mentor---article-preview-component-solution)
@@ -9,15 +11,14 @@ This is a solution to the [Article preview component challenge on Frontend Mento
   - [Overview](#overview)
     - [Screenshot](#screenshot)
     - [Links](#links)
-  - [My process](#my-process)
     - [Built with](#built-with)
     - [What I learned](#what-i-learned)
-    - [Continued development](#continued-development)
     - [Useful resources](#useful-resources)
-  - [Acknowledgments](#acknowledgments)
+
 
 
 ## Overview
+
 It's a front-end challenge from Frontend Mentor to build a responsive article preview component. The teaser is responsive and can be used on any screen size. It is styled as a card and contains an image, title, description and footer. The card is interactive in that when user clicks on share button, the social media buttons are displayed and when the user clicks anywhere outside the share button, social media buttons are hidden. All of this is implemented using CSS and vanilla JavaScript. Finally, the card is also accessible to screen readers.
 
 
@@ -37,40 +38,38 @@ It's a front-end challenge from Frontend Mentor to build a responsive article pr
 ### Links
 
 - Solution URL: [https://github.com/py-code314/article-preview-component](https://github.com/py-code314/article-preview-component)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [https://artcle-preview-component.netlify.app/](https://artcle-preview-component.netlify.app/)
 
-## My process
+
 
 ### Built with
 
 - Semantic HTML5 markup
-- CSS custom properties
+- Sass
+- Gulp
+- Vanilla JavaScript
 - Flexbox
-- CSS Grid
 - Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
 
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
+
 
 ### What I learned
 
+- This was my first project using Gulp to compile Sass files
+- I had an issue with deploying the Github repo to Netlify and I resolved it by adding this additional code to 'gulpfile.js':
+```
+function build(cb) {
+  gulp.series(styles)(cb);
+}
 
-
-### Continued development
-
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
+exports.build = build;
+```
+- I also had to change the Publish Directory in Netlify to root directory '.'(a single dot) for successful deployment
 
 
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-
-
-## Acknowledgments
-
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
+- All the code written in 'gulpfile.js' is taken from a [Kevin Powell video tutorial](https://www.youtube.com/watch?v=QgMQeLymAdU)
+- I used Josh Comeau's [CSS Reset](https://www.joshwcomeau.com/css/custom-css-reset/) to remove default browser styles
 
