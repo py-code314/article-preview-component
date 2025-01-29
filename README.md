@@ -9,8 +9,9 @@ This is a solution to the [Article preview component challenge on Frontend Mento
 - [Frontend Mentor - Article preview component solution](#frontend-mentor---article-preview-component-solution)
   - [Table of contents](#table-of-contents)
   - [Overview](#overview)
-    - [Screenshot](#screenshot)
+    - [Screenshots](#screenshots)
     - [Links](#links)
+  - [My Process](#my-process)
     - [Built with](#built-with)
     - [What I learned](#what-i-learned)
     - [Useful resources](#useful-resources)
@@ -23,7 +24,7 @@ It's a front-end challenge from Frontend Mentor to build a responsive article pr
 
 
 
-### Screenshot
+### Screenshots
 
 <p>
     <img src="./images/screenshot-mobile-2.png" width="45%" hspace="10" >
@@ -41,6 +42,7 @@ It's a front-end challenge from Frontend Mentor to build a responsive article pr
 - Live Site URL: [https://artcle-preview-component.netlify.app/](https://artcle-preview-component.netlify.app/)
 
 
+## My Process
 
 ### Built with
 
