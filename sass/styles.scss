@@ -4,6 +4,7 @@
 @use 'mixins' as *;
 
 
+
 /* Styles for the whole page */
 body {
   @include flex(center);
@@ -11,7 +12,7 @@ body {
   min-height: 100svh;
   background-color: $clr-light-grayish-blue;
   font-family: $ff-manrope;
-  padding: 1rem;
+  padding: 1rem; 
 }
 
 
@@ -94,11 +95,15 @@ body {
 
 /* Styles for Card Title */
 .card__title {
-  font-size: $fs-card-title;
+  // WARNING: Text is getting smaller when zoomed-in on the page in Safari with clamp function
+  // font-size: $fs-card-title;
+
+  font-size: 1rem;
   margin-block-end: $space-300;
 
   @include laptop {
     line-height: 1.4;
+    font-size: 1.25rem;
   }
 }
 
@@ -108,6 +113,8 @@ body {
   font-size: $fs-250;
   font-weight: $fw-medium;
 }
+
+
 
 
 /* Separate styles for Card Footer so that Social Media Buttons can be positioned relative to it */
