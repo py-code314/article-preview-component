@@ -26,8 +26,8 @@ It's a front-end challenge from Frontend Mentor to build a responsive article pr
 ### Screenshot
 
 <p>
-    <img src="./images/screenshot-mobile-1.png" width="45%" hspace="10" >
-    <img src="./images/screenshot-mobile-active-state-1.png" width="45%" hspace="10" >
+    <img src="./images/screenshot-mobile-2.png" width="45%" hspace="10" >
+    <img src="./images/screenshot-mobile-active-state-2.png" width="45%" hspace="10" >
     <p>
     <img src="./images/screenshot-desktop-1.png" width="45%" hspace="10" >
     <img src="./images/screenshot-desktop-active-state-1.png" width="45%" hspace="10" >
