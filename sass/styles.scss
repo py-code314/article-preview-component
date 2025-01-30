@@ -61,10 +61,12 @@ body {
   height: 100%;
   width: 100%;
   object-fit: cover;
+  object-position: 0 -15px;
   border-radius: $radius-md $radius-md 0 0 ;
 
   @include laptop {
     border-radius: $radius-md 0 0 $radius-md;
+    object-position: left;
   }
 }
 
@@ -115,14 +117,12 @@ body {
 }
 
 
-
-
 /* Separate styles for Card Footer so that Social Media Buttons can be positioned relative to it */
 .card__footer {
   @include flex(space-between);
 
   padding: $space-300 $space-900 $space-600;
-  position: relative;
+  position: relative; // Position Social media container relative to it in Mobile view.
 
   @include laptop {
     padding: $space-300 $space-1100 $space-600;
@@ -131,7 +131,7 @@ body {
 
 
 /* Styles for Card Footer when Social Media Buttons are Open in Mobile View */
-.card__footer:has(> .card__share-btn[aria-expanded='true'])  {
+.card__footer:has( .card__share-btn[aria-expanded='true'])  {
   padding: $space-200 $space-900 $space-200;
 
   // No Change in Padding for Laptop Screen Size
@@ -140,6 +140,7 @@ body {
 
 }
 }
+
 
 .card__author-byline {
   display: flex;
@@ -180,6 +181,7 @@ body {
   height: $len-850;
   border-radius: $radius-lg;
   cursor: pointer;
+  position: relative; // Change it to a positioned element so that z-index value applies to it.
   z-index: 1;
   
 }
@@ -195,8 +197,15 @@ body {
 }
 
 
+
+.card__social-wrapper {
+  @include laptop {
+    position: relative; // Position Social media container relative to it in desktop view.
+  }
+  
+}
 /* Styles for Social Media Buttons Container in Mobile View */
-.card__social {
+.card__social-icons {
   display: flex;
   align-items: center;
   gap: $space-400;
@@ -206,6 +215,7 @@ body {
   /* Place it inside Card Footer occupying the whole width and height */
   position: absolute;
   left: 0;
+  bottom: 0;
   width: 100%;
   height: 100%;
   padding-inline-start: $space-900;
@@ -217,15 +227,16 @@ body {
     height: max-content;
     padding: $space-500 $space-1000;
     border-radius: $radius-sm;
-    left: 60%;
-    bottom: 115%;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: $space-1600;
     box-shadow: $shadow-sm;
   }
 }
 
 
 /* Create Pseudo Element for Social Media Buttons Container in Laptop View */
-.card__social::after {
+.card__social-icons::after {
   @include laptop {
     content: '';
     position: absolute;
@@ -242,7 +253,7 @@ body {
 
 
 /* Show Social Media Buttons Container when Share Button is Clicked */
-.card__share-btn[aria-expanded='true'] + .card__social {
+.card__share-btn[aria-expanded='true'] + .card__social-icons {
   display: flex;
 }
 

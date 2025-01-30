@@ -81,11 +81,13 @@ body {
   height: 100%;
   width: 100%;
   object-fit: cover;
+  object-position: 0 -15px;
   border-radius: 0.75rem 0.75rem 0 0;
 }
 @media (min-width: 64em) {
   .card__image {
     border-radius: 0.75rem 0 0 0.75rem;
+    object-position: left;
   }
 }
 
@@ -146,11 +148,11 @@ body {
 }
 
 /* Styles for Card Footer when Social Media Buttons are Open in Mobile View */
-.card__footer:has(> .card__share-btn[aria-expanded=true]) {
+.card__footer:has(.card__share-btn[aria-expanded=true]) {
   padding: 0.75rem 2rem 0.75rem;
 }
 @media (min-width: 64em) {
-  .card__footer:has(> .card__share-btn[aria-expanded=true]) {
+  .card__footer:has(.card__share-btn[aria-expanded=true]) {
     padding: 0.875rem 2.5rem 1.25rem;
   }
 }
@@ -190,6 +192,7 @@ body {
   height: 1.875rem;
   border-radius: 62.4375rem;
   cursor: pointer;
+  position: relative;
   z-index: 1;
 }
 
@@ -201,8 +204,14 @@ body {
   fill: hsl(0, 0%, 100%);
 }
 
+@media (min-width: 64em) {
+  .card__social-wrapper {
+    position: relative;
+  }
+}
+
 /* Styles for Social Media Buttons Container in Mobile View */
-.card__social {
+.card__social-icons {
   display: flex;
   align-items: center;
   gap: 1rem;
@@ -211,26 +220,28 @@ body {
   /* Place it inside Card Footer occupying the whole width and height */
   position: absolute;
   left: 0;
+  bottom: 0;
   width: 100%;
   height: 100%;
   padding-inline-start: 2rem;
   border-radius: 0 0 0.75rem 0.75rem;
 }
 @media (min-width: 64em) {
-  .card__social {
+  .card__social-icons {
     width: max-content;
     height: max-content;
     padding: 1.125rem 2.25rem;
     border-radius: 0.5rem;
-    left: 60%;
-    bottom: 115%;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 3.75rem;
     box-shadow: 2px 5px 10px rgba(154, 160, 185, 0.5);
   }
 }
 
 /* Create Pseudo Element for Social Media Buttons Container in Laptop View */
 @media (min-width: 64em) {
-  .card__social::after {
+  .card__social-icons::after {
     content: "";
     position: absolute;
     border-right: 0.75rem solid transparent;
@@ -245,7 +256,7 @@ body {
 }
 
 /* Show Social Media Buttons Container when Share Button is Clicked */
-.card__share-btn[aria-expanded=true] + .card__social {
+.card__share-btn[aria-expanded=true] + .card__social-icons {
   display: flex;
 }
 
