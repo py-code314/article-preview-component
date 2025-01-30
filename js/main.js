@@ -1,5 +1,5 @@
 /* Global Variables */
-const socialMediaIcons = document.querySelector('.card__social');
+const socialMediaIcons = document.querySelector('.card__social-icons');
 const shareBtn = document.querySelector('#card__share-btn');
 
 
